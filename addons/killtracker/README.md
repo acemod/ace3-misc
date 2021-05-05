@@ -7,10 +7,9 @@ Note: Requires config setup in a mission's description.ext - has no effect if mi
 
 ```powershell
     class CfgDebriefingSections {
-        class acex_killTracker {
-            title = "ACEX Killed Events";
-            variable = "acex_killTracker_outputText";
-        };
+        #if __has_include("\z\acex\addons\killtracker\killtracker.inc")
+            #include "\z\acex\addons\killtracker\killtracker.inc"
+        #endif
     };
 ```
 
